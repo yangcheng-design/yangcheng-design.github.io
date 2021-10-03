@@ -1,0 +1,108 @@
+/* --- Main Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: F7F7F7;
+}
+
+html {
+    font-size: 15px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.hero-section {
+    background-image: url(images/hero-image-2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 886px;
+    position: relative;
+}
+
+.hero-content {
+    position: absolute;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-family: 'Merriweather', Futura;
+    font-size: 48px;
+    line-height: 64px;
+    color: #fff;
+    position: absolute;
+    left: 70px;
+    top: 350px;
+    width: 470px;
+}
+
+.hero-content button {
+    background: #FF5964;
+    border: none;
+    border-radius: 50px;
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    width: 220px;
+    height: 45px;
+    margin-top: 510px;
+    margin-left: 70px;
+    font-size: 18px;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    color: #fff;
+    font-size: 18px;
+}
+
+.logo {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.cart {
+    margin-top: 10px;
+    margin-right: 20px;
+    width: 38px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0 60px;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+#hero-image {
+    top: 0; 
+    left: 0; 
+	
+    /* Preserve aspet ratio */
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.best-sellers-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.scrolling-wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.card {
+    display: inline-block;
+}
