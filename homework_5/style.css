@@ -11,13 +11,29 @@ html {
     font-family: 'Raleway', sans-serif;
 }
 
+h3 {
+    font: 400 48px 'Raleway', sans-serif;
+    margin-bottom: 150px;
+}
+
+button {
+    background: #78C4FF;
+    border: none;
+    border-radius: 50px;
+    font: 18px 'Raleway', sans-serif;
+    color: #fff;
+    width: 220px;
+    height: 45px;
+}
+
 .hero-section {
-    background-image: url(images/hero-image-2.png);
+    background-image: url(images/hero-image-4.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 886px;
     position: relative;
+    margin-bottom: 50px;
 }
 
 .hero-content {
@@ -26,8 +42,7 @@ html {
 }
 
 .hero-content h1 {
-    font-family: 'Merriweather', Futura;
-    font-size: 48px;
+    font: 48px 'Merriweather', Futura;
     line-height: 64px;
     color: #fff;
     position: absolute;
@@ -38,15 +53,8 @@ html {
 
 .hero-content button {
     background: #FF5964;
-    border: none;
-    border-radius: 50px;
-    font-family: 'Raleway', sans-serif;
-    color: #fff;
-    width: 220px;
-    height: 45px;
     margin-top: 510px;
     margin-left: 70px;
-    font-size: 18px;
 }
 
 .navbar {
@@ -81,6 +89,7 @@ nav ul li {
 
 a {
     text-decoration: none;
+    color: #fff;
 }
 
 #hero-image {
@@ -97,6 +106,14 @@ a {
     flex-direction: row;
 }
 
+.best-sellers-content h3 {
+    margin: 0px auto 72px auto;
+}
+
+.best-sellers-content p {
+    margin-bottom: 120px;
+}
+
 .scrolling-wrapper {
     overflow-x: scroll;
     overflow-y: hidden;
@@ -105,4 +122,7 @@ a {
 
 .card {
     display: inline-block;
+    margin-right: 20px;
 }
+
+
