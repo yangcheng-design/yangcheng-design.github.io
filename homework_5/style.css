@@ -8,11 +8,16 @@
 
 html {
     font-size: 15px;
+    color: #334655;
     font-family: 'Raleway', sans-serif;
 }
 
+h1 {
+    font: 3rem 'Merriweather', sans-serif;
+}
+
 h3 {
-    font: 400 48px 'Raleway', sans-serif;
+    font: 400 2rem 'Raleway', sans-serif;
     margin-bottom: 150px;
 }
 
@@ -20,7 +25,7 @@ button {
     background: #78C4FF;
     border: none;
     border-radius: 50px;
-    font: 18px 'Raleway', sans-serif;
+    font: 1rem 'Raleway', sans-serif;
     color: #fff;
     width: 220px;
     height: 45px;
@@ -42,7 +47,7 @@ button {
 }
 
 .hero-content h1 {
-    font: 48px 'Merriweather', Futura;
+    font: 3rem 'Merriweather', Futura;
     line-height: 64px;
     color: #fff;
     position: absolute;
@@ -65,7 +70,7 @@ button {
 }
 
 nav {
-    color: #fff;
+    color: #334655;
     font-size: 18px;
 }
 
@@ -80,16 +85,28 @@ nav {
     width: 38px;
 }
 
-nav ul li {
-    display: inline-block;
+nav ul {
+    display: flex;
+    align-items: center;
     list-style-type: none;
     margin: 0 60px;
     color: #fff;
 }
 
+nav ul li .down-arrow {
+    padding: 5px;
+    height: 30px;
+}
+
+.shop-btn {
+    padding-left: 100px; 
+}
+
 a {
     text-decoration: none;
-    color: #fff;
+    color: #334655;
+    display: flex;
+    align-items: center;
 }
 
 #hero-image {
@@ -101,17 +118,13 @@ a {
     min-height: 100%;
 }
 
-.best-sellers-container {
+.best-sellers-container, .product-scrolling-container {
     display: flex;
     flex-direction: row;
 }
 
-.best-sellers-content h3 {
-    margin: 0px auto 72px auto;
-}
-
-.best-sellers-content p {
-    margin-bottom: 120px;
+.best-sellers-content, .testimonial-content {
+    margin: 0px auto 72px 50px;
 }
 
 .scrolling-wrapper {
@@ -125,4 +138,36 @@ a {
     margin-right: 20px;
 }
 
+.testimonial-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
 
+.testimonial-content  {
+    margin: 5px auto auto 90px;
+}
+
+.testimonial-content p {
+    margin: 5px auto auto 90px;
+    font: 36px 'Merriweather', sans-serif;
+}
+
+#quote-right {
+    margin: auto auto auto 450px;
+}
+
+.product-header {
+    background-color: #DDF0FF;
+    margin-left: 50px;
+    margin-right: 50px;
+    height: 170px;
+}
+
+.product-header h1 {
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+
+hr {
+    margin-top: 35px;
+}
