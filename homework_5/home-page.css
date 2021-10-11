@@ -1,0 +1,80 @@
+/* --- Home Page Styles --- */
+
+#home-page-nav {
+    color: #fff;
+}
+
+.hero-section {
+    background-image: url(images/hero-image-4.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 886px;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.hero-content {
+    position: absolute;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font: 3rem 'Merriweather', Futura;
+    line-height: 64px;
+    color: #fff;
+    position: absolute;
+    left: 70px;
+    top: 350px;
+    width: 470px;
+}
+
+.hero-content button {
+    background: #FF5964;
+    color: #fff;
+    margin-top: 510px;
+    margin-left: 70px;
+}
+
+#hero-image {
+    top: 0; 
+    left: 0; 
+	
+    /* Preserve aspet ratio */
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.best-sellers-container, .product-scrolling-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 50px;
+}
+
+.best-sellers-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.testimonial-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.testimonial-content p {
+    margin: 5px auto auto 90px;
+    max-width: 470px;
+    font: 36px 'Merriweather', sans-serif;
+}
+
+.testimonial-content button {
+    float: left;
+    margin-top: 100px;
+}
+
+#quote-right {
+    margin: auto auto auto 450px;
+}

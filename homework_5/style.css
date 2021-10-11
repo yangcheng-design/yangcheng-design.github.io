@@ -1,4 +1,6 @@
-/* --- Main Styles --- */
+/* --- Base Styles
+This file is included by all pages --- */ 
+
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +9,8 @@
 }
 
 html {
-    font-size: 15px;
+    font-size: 17px;
+    line-height: 22px;
     color: #334655;
     font-family: 'Raleway', sans-serif;
 }
@@ -17,49 +20,18 @@ h1 {
 }
 
 h3 {
-    font: 400 2rem 'Raleway', sans-serif;
-    margin-bottom: 150px;
+    font: 400 3rem 'Merriweather', sans-serif;
 }
 
+/* --- Secondary Button Styles --- */
 button {
     background: #78C4FF;
     border: none;
     border-radius: 50px;
     font: 1rem 'Raleway', sans-serif;
-    color: #fff;
+    color: #334655;
     width: 220px;
     height: 45px;
-}
-
-.hero-section {
-    background-image: url(images/hero-image-4.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 886px;
-    position: relative;
-    margin-bottom: 50px;
-}
-
-.hero-content {
-    position: absolute;
-    color: #fff;
-}
-
-.hero-content h1 {
-    font: 3rem 'Merriweather', Futura;
-    line-height: 64px;
-    color: #fff;
-    position: absolute;
-    left: 70px;
-    top: 350px;
-    width: 470px;
-}
-
-.hero-content button {
-    background: #FF5964;
-    margin-top: 510px;
-    margin-left: 70px;
 }
 
 .navbar {
@@ -70,18 +42,17 @@ button {
 }
 
 nav {
-    color: #334655;
+    color: #334655; /* Nav menu black on home page */ 
     font-size: 18px;
 }
 
-.logo {
+/* Ensure alignment of logo and cart */ 
+.logo, .cart {
     margin-top: 10px;
     margin-left: 20px;
 }
 
 .cart {
-    margin-top: 10px;
-    margin-right: 20px;
     width: 38px;
 }
 
@@ -93,40 +64,31 @@ nav ul {
     color: #fff;
 }
 
-nav ul li .down-arrow {
+nav ul li .down-arrow{
     padding: 5px;
     height: 30px;
 }
 
-.shop-btn {
-    padding-left: 100px; 
-}
-
-a {
+/* Special styling for nav menu */ 
+.navbar a {
     text-decoration: none;
     color: #334655;
     display: flex;
     align-items: center;
 }
 
-#hero-image {
-    top: 0; 
-    left: 0; 
-	
-    /* Preserve aspet ratio */
-    min-width: 100%;
-    min-height: 100%;
+/* Base styling for all links */ 
+a {
+    text-decoration: none;
+    color: #334655;
+    align-items: center;
 }
 
-.best-sellers-container, .product-scrolling-container {
-    display: flex;
-    flex-direction: row;
+.shop-btn {
+    padding-left: 100px; 
 }
 
-.best-sellers-content, .testimonial-content {
-    margin: 0px auto 72px 50px;
-}
-
+/* Create horizontal scroll bar */ 
 .scrolling-wrapper {
     overflow-x: scroll;
     overflow-y: hidden;
@@ -138,36 +100,24 @@ a {
     margin-right: 20px;
 }
 
-.testimonial-wrapper {
-    display: flex;
-    justify-content: space-between;
+footer {
+    margin-top: 50px;
+    padding: 50px;
+    width: 100%;
+    background-color: #D2EBFF;
+    text-align: center;
 }
 
-.testimonial-content  {
-    margin: 5px auto auto 90px;
+footer ul li {
+    list-style: none;
 }
 
-.testimonial-content p {
-    margin: 5px auto auto 90px;
-    font: 36px 'Merriweather', sans-serif;
-}
-
-#quote-right {
-    margin: auto auto auto 450px;
-}
-
-.product-header {
-    background-color: #DDF0FF;
-    margin-left: 50px;
+.footer-item li {
+    font-weight: bold;
+    display: inline-block;
     margin-right: 50px;
-    height: 170px;
 }
 
-.product-header h1 {
-    padding-top: 50px;
-    padding-bottom: 10px;
-}
-
-hr {
-    margin-top: 35px;
+.copyright {
+    margin-top: 50px;
 }
