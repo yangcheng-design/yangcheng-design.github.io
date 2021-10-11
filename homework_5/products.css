@@ -1,4 +1,5 @@
-/* --- Styles for Product Browsing Page --- */
+/* --- Product Browsing Page Styles --- */
+
 .navbar {
     background-color: #DDF0FF;
 }
@@ -37,4 +38,5 @@
 
 .card {
     width: 300px;
+    height: auto;
 }
