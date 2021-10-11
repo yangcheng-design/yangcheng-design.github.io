@@ -61,7 +61,7 @@
 .testimonial-wrapper {
     display: grid;
     margin: auto 50px 100px 50px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1.5fr;
     grid-gap: 20px;
 }
 
@@ -76,9 +76,6 @@
     margin-top: 150px;
 }
 
-.testimonial-img {
-    
-}
 #quote-right {
-    margin: auto auto auto 350px;
+    float: right;
 }
