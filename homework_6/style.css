@@ -1,0 +1,123 @@
+/* --- Base Styles
+This file is included by all pages --- */ 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: F7F7F7;
+}
+
+html {
+    font-size: 17px;
+    line-height: 22px;
+    color: #334655;
+    font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+    font: 3rem 'Merriweather', sans-serif;
+}
+
+h3 {
+    font: 400 3rem 'Merriweather', sans-serif;
+}
+
+/* --- Secondary Button Styles --- */
+button {
+    background: #78C4FF;
+    border: none;
+    border-radius: 50px;
+    font: 1rem 'Raleway', sans-serif;
+    color: #334655;
+    width: 220px;
+    height: 45px;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    color: #334655; /* Nav menu black on home page */ 
+    font-size: 18px;
+}
+
+/* Ensure alignment of logo and cart */ 
+.logo, .cart {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.cart {
+    width: 38px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    margin: 0 60px;
+    color: #fff;
+}
+
+nav ul li .down-arrow{
+    padding: 5px;
+    height: 30px;
+}
+
+/* Special styling for nav menu */ 
+.navbar a {
+    text-decoration: none;
+    color: #334655;
+    display: flex;
+    align-items: center;
+}
+
+/* Base styling for all links */ 
+a {
+    text-decoration: none;
+    color: #334655;
+    align-items: center;
+}
+
+.shop-btn {
+    padding-left: 100px; 
+}
+
+/* Create horizontal scroll bar */ 
+.scrolling-wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.card {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+footer {
+    margin-top: 50px;
+    padding: 50px;
+    width: 100%;
+    background-color: #D2EBFF;
+    text-align: center;
+}
+
+footer ul li {
+    list-style: none;
+}
+
+.footer-item li {
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.copyright {
+    margin-top: 50px;
+}
