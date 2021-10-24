@@ -1,0 +1,58 @@
+/* This css file is for the shopping cart page */
+
+/* Center-align table and display at 80% of page width */
+table {
+    display: flex;
+    border-collapse: collapse;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.total-price button {
+    background: #FF5964;
+    color: #fff;
+}
+
+h1 {
+    margin: 5rem auto 5rem 8rem;
+}
+
+th {
+    text-align: left;
+}
+  
+.cart-info {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cart-info img {
+    width: 150px;
+}
+  
+.item-text{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+td {
+    min-width: 200px;
+    padding: 1rem 0.5rem;
+}
+
+.total-price {
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+    flex-direction: column;
+    margin: 2rem 10rem auto auto;
+}
+
+.price-calc {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 220px;
+    margin-bottom: 2rem;
+}

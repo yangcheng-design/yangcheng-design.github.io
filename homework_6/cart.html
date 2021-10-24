@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Muddy Paws</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cart.css">
+  </head>
+
+  <body>
+    <div class="navbar">
+      <a href="./index.html" class="logo">
+        <img src="./images/logo.svg" alt="Muddy Paws Logo">
+      </a>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li class="shop-btn">
+            <a href="./products.html">
+              <p>Shop</p>
+              <img class="down-arrow" src="./images/down-arrow.png">
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <img src="./images/cart-icon-black.svg" class="cart">
+    </div>
+
+    <h1>Shopping Bag</h1>
+
+    <table>
+        <tr>
+            <th>Item</th>
+            <th>Item Price</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+        </tr>
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="./images/backpack-product-card-1.png" alt="" />
+                    <div class="item-text">
+                        <p>Adventure Cat Backpack</p>
+                        <br />
+                        <a href="#">remove</a>
+                    </div>
+                </div>
+            </td>
+            <td>$46</td>
+            <td><input type="number" value="1" min="1" /></td>
+            <td>$46</td>
+        </tr>
+    </table>
+
+    <div class="total-price">
+        <div class="price-calc">
+            <p>Total: </p>
+            <p>$46</p>
+        </div>
+        <button>Proceed to Checkout</button>
+    </div>
+
+    <footer>
+        <ul class="footer-item">
+          <li>About Us</li>
+          <li>Shop Cats</li>
+          <li>Shop Dogs</li>
+        </ul>
+        <ul class="copyright">
+          <li>© 2021 Muddy Paws. All Rights Reserved. </li>
+          <li>Privacy Policy - Cookie Policy - Terms & Conditions</li>
+        </ul>
+    </footer>
+    
+    </body>
+  </html>
