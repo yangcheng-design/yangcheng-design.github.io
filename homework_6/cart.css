@@ -1,6 +1,6 @@
 /* This css file is for the shopping cart page */
 
-/* Center-align table and display at 80% of page width */
+/* Center-align table and display at 70% of page width */
 table {
     display: flex;
     border-collapse: collapse;
@@ -9,6 +9,7 @@ table {
     margin-right: auto; 
 }
 
+/* Apply primary button style */
 .total-price button {
     background: #FF5964;
     color: #fff;
@@ -41,12 +42,19 @@ td {
     padding: 1rem 0.5rem;
 }
 
+/* Display total price section to the right */
 .total-price {
     display: flex;
     justify-content: flex-end;
     align-items: end;
     flex-direction: column;
     margin: 2rem 10rem auto auto;
+}
+
+hr {
+    border-top: 4px solid #FF5964;
+    padding: 10px;
+    width: 220px;
 }
 
 .price-calc {

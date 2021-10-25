@@ -46,13 +46,9 @@ nav {
 }
 
 /* Ensure alignment of logo and cart */ 
-.logo, .cart {
+.logo, #cart {
     margin-top: 10px;
     margin-left: 20px;
-}
-
-.cart {
-    width: 38px;
 }
 
 nav ul {
