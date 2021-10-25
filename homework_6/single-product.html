@@ -21,25 +21,28 @@
           </li>
         </ul>
       </nav>
-      <img src="./images/cart-icon-black.svg" class="cart" alt="Shopping cart">
+      <a href="./cart.html">
+        <img src="./images/cart-icon-black.svg" id="cart" alt="Shopping cart">
+      </a>
     </div>
 
     <div class="main-body">
-      <img class="product-image" src="./images/cat-backpack-product-image.jpg" alt="Leather backpack with window">
+      <img id="product-image" src="./images/cat-backpack-product-image.jpg" alt="Leather backpack with window">
       <div class="product-title">
         <h5>Adventure backpack</h5>
         <p class="price">$46</p>
       </div>
       
       <div class="colors">
-      <p>Crazyberry</p>
-        <img src="./images/color-strawberry.svg" alt="Strawberry color">
-        <img src="./images/color-blackberry.svg" alt="Black berry color">
-        <img src="./images/color-crazyberry.svg" alt="Crazyberry color">
-        <img src="./images/color-fire-orange.svg" alt="Fire orange color">
+        <p>Colors</p>
+        <img class="color-strawberry" src="./images/color-strawberry.svg" alt="Strawberry color">
+        <img class="color-blackberry" src="./images/color-blackberry.svg" alt="Black berry color">
+        <img class="color-crazyberry" src="./images/color-crazyberry.svg" alt="Crazyberry color">
+        <img class="color-orange" src="./images/color-fire-orange.svg" alt="Fire orange color">
       </div>
       
       <div class="sizes">
+        <p>Sizes</p>
         <img src="./images/size-tiny.svg" alt="Size tiny" class="size">
         <img src="./images/size-small.svg" alt="Size small" class="size">
         <img src="./images/size-medium.svg" alt="Size medium" class="size">
@@ -47,9 +50,8 @@
       </div>
       
       <p class="product-description">The Adventure Backpack pet carrier is the easiest way to transport your pet in comfort and style. The carrier features mesh ventilation all the way around so your pet won’t miss any views while you travel.</p>
-      <button>Add to cart</button>
+      <button class="add-to-cart-btn">Add to cart</button>
     
-      <img class="product-image" src="./images/cat-backpack-front-view.png" alt="Front view of backpack">
       <h4>Features</h4>
       <ul>
         <li>Faux leather exteriors</li>
@@ -62,7 +64,6 @@
         <li>Weight: 2.05 Pounds</li>
         <li>Material: faux leather</li>
       </ul>
-      <img class="product-image" src="./images/cat-backpack-back-view.png" alt="Back view of backpack">
     </div>
 
     <footer>
@@ -77,5 +78,7 @@
       </ul>
     </footer>
 
+    <script type="text/javascript" src="./app.js"></script>
+    
   </body>
 </html>

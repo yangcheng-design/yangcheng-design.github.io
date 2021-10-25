@@ -36,6 +36,10 @@
     margin-left: 70px;
 }
 
+#cart {
+    padding-right: 5rem;
+}
+
 #hero-image {
     top: 0; 
     left: 0; 
