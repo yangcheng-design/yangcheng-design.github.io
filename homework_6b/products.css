@@ -1,0 +1,42 @@
+/* --- Product Browsing Page Styles --- */
+
+.navbar {
+    background-color: #DDF0FF;
+}
+
+.product-header {
+    background-color: #DDF0FF;
+    height: 250px;
+    margin-bottom: 120px;
+}
+
+/* Indent the header by 50px */ 
+.product-header > * {
+    margin-left: 50px;
+}
+
+.product-header h1 {
+    padding-top: 100px;
+    padding-bottom: 10px;
+}
+
+.product-header p {
+    padding-bottom: 50px;
+}
+
+.product-scrolling-container {
+    margin: auto auto 100px 50px;
+    display: grid;
+    grid-template-columns: 350px 1fr;
+}
+
+.product-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.card {
+    width: 300px;
+    height: auto;
+}
