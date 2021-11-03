@@ -4,7 +4,7 @@
 table {
     display: flex;
     border-collapse: collapse;
-    width: 70%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto; 
 }
@@ -23,18 +23,26 @@ th {
     text-align: left;
 }
   
-.cart-info {
+.cart-item {
     display: flex;
     flex-wrap: wrap;
 }
 
-.cart-info img {
+.cart-item img {
     width: 150px;
 }
   
-.item-text{
+.item-details{
     padding-left: 20px;
     padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item-details a {
+    color: #FF5964;
+    text-decoration: underline;
 }
 
 td {
@@ -53,7 +61,7 @@ td {
 
 hr {
     border-top: 4px solid #FF5964;
-    padding: 10px;
+    margin-bottom: 10px;
     width: 220px;
 }
 

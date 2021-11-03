@@ -39,20 +39,18 @@
             <th>Quantity</th>
             <th>Subtotal</th>
         </tr>
-        <tr>
-            <td>
-                <div class="cart-info">
-                    <img src="./images/backpack-product-card-1.png" alt="" />
-                    <div class="item-text">
-                        <p>Adventure Cat Backpack</p>
-                        <br />
-                        <a href="#">remove</a>
-                    </div>
-                </div>
+        <tr class="cart-row">
+            <td class="cart-item">
+              <img src="./images/backpack-product-card-1.png" alt="" />
+              <div class="item-details">
+                <p>Adventure Cat Backpack</p>
+                <br />
+                <a href="#" class="remove-btn">Remove</a>
+              </div>
             </td>
-            <td>$46</td>
-            <td><input type="number" value="1" min="1" /></td>
-            <td>$46</td>
+            <td class="item-price">$46</td>
+            <td><input type="number" id="item-quantity" value="1" min="1" /></td>
+            <td class="item-subtotal">$46</td>
         </tr>
     </table>
 
@@ -77,5 +75,7 @@
         </ul>
     </footer>
     
+    <script type="text/javascript" src="./js/cart.js"></script>
+
     </body>
   </html>

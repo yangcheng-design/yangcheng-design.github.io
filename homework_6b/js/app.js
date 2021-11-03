@@ -1,5 +1,11 @@
 // JS implementation for shopping page functionality
 
+function Product(productName, productColor, productSize) {
+    this.name = productName;
+    this.color = productColor;
+    this.size = productSize;
+}
+
 // Get the imgs for each color selection
 let strawberry = document.querySelector('.color-strawberry');
 let blackberry = document.querySelector('.color-blackberry');
@@ -28,3 +34,4 @@ orange.addEventListener('click', function () {
 buyBtn.addEventListener('click', function () {
         document.getElementById('cart').src = './images/cart-1-item.svg';
     });
+
