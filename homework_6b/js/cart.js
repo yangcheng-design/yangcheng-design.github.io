@@ -14,7 +14,7 @@ for (let i = 0; i < removeCartItemButtons.length; i++) {
     button.addEventListener('click', function(event) {
         var buttonClicked = event.target;
         buttonClicked.parentElement.parentElement.parentElement.remove();
-        updateSubtotal();  // update total price TODO
+        updatePrice();  // update total price
     })
 }
 

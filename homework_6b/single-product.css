@@ -59,10 +59,12 @@ button:hover{
     transition: all 0.5s ease-in-out;
 }
 
-.color-strawberry:active, .color-blackberry:active, .color-crazyberry:active, .color-orange:active {
-    border: 2px solid black;
+.color-strawberry:active, .color-blackberry:active, .color-crazyberry:active, .color-orange:active, .active-color {
+    border: 3px solid black;
+    border-radius: 50%;
 }
 
-.sizes img:active {
+.sizes img:active, .active-size {
     border: 2px solid black;
+    border-radius: 50%;
 }
