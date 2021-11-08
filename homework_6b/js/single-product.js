@@ -1,8 +1,16 @@
 // JS implementation for shopping page functionality
 
-// Setup local and session storage variables for cart items and quantity
-let itemsList = []
-var totalCartQuantity = 0;
+// Setup local storage
+var savedCart = JSON.parse(localStorage.getItem('savedCart'));
+var cart = savedCart ? savedCart : [];
+var savedQuantity = localStorage.getItem('cartQuantity');
+var totalCartQuantity = savedQuantity ? savedQuantity : 0;
+
+// if (localStorage.getItem('cartQuantity') != null) {
+//     totalCartQuantity = localStorage.getItem('cartQuantity');
+//     var cartNum = document.querySelector['.cart-num-items'].innerText;
+//     console.log(cartNum);
+// }
 
 // Declare Product object
 function Product(productName, productColor, productSize) {
@@ -11,7 +19,9 @@ function Product(productName, productColor, productSize) {
     this.size = productSize;
 }
 
-const itemToBuy = new Product('name', 'color', 'tiny');
+var itemName = 'Adventure Cat Backpack';
+var color = 'color-strawberry';
+var size = 'size-tiny';
 
 // Get the imgs for each color selection
 let strawberry = document.querySelector('.color-strawberry');
@@ -48,8 +58,10 @@ var colorInputs = document.querySelectorAll('.colors >img');
 for(let i = 0; i < colorInputs.length; i++) { 
     colorInputs[i].addEventListener('click', function () { 
         var current = document.getElementsByClassName('active-color'); 
-        current[0].className = current[0].className.replace(' active-color', ''); 
+        current[0].className = current[0].className.replace(' active-color', ''); // replace deselected class
         this.className += ' active-color'; 
+        color = current[0].className.split(' ')[0];  // get the color name from the list of Class names
+        // console.log(color);
     });
 }
 
@@ -60,25 +72,23 @@ for(let i = 0; i < sizeInputs.length; i++) {
         var current = document.getElementsByClassName('active-size'); 
         current[0].className = current[0].className.replace(' active-size', ''); 
         this.className += ' active-size'; 
+        size = current[0].className.split(' ')[0];
     });
 }
 
-// Store currently selected color/size in local storage
+// Change the item quantity
+document.querySelector('.cart-num-items').innerText = totalCartQuantity;
 
-// // Change the item quantity
-// document.getElementById("num-items-cart").innerHTML = totalCartQuantity;
-
-// Add to cart button 
+// Store currently selected color/size product in local storage
 buyBtn.addEventListener("click", function() {
     // Add new product item to local storage 
-    let tempQ = 0;
-    
-    itemsList.push()
-    localStorage.setItem('items', JSON.stringify(itemsList))
-    // Update number of cart items 
-    tempQ += parseInt(totalCartQuantity) + quantity;
-    totalCartQuantity = tempQ;
-    sessionStorage.setItem('cartQ', tempQ)
-    document.getElementById("num-items-cart").innerHTML = tempQ;
-
+    const itemToBuy = new Product(itemName, color, size);
+    cart.push(itemToBuy);
+    localStorage.setItem('savedCart', JSON.stringify(cart));
+    // Update number of items
+    totalCartQuantity++;
+    console.log("++ totalcartquant", totalCartQuantity);
+    localStorage.setItem('cartQuantity', totalCartQuantity);
+    cartQuantityElem = document.querySelector('.cart-num-items');
+    cartQuantityElem.innerText = totalCartQuantity;
 })

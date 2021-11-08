@@ -2,16 +2,47 @@
 // save to current items local storage
 // update cart number
 // load current items
-// function loadProducts() {
 
-// }
+const storedValue = JSON.parse(localStorage.getItem('savedCart'));
+const productItems = storedValue ? storedValue : []; 
+
+loadCart();
+
+updatePrice();
+
+function loadCart() {
+    for (let i = 0; i < productItems.length; i++) {
+        displaySingleProduct(productItems[i]);
+    }
+}
+
+function displaySingleProduct(product) {
+    var displayColor = product.color.split('-')[1]; // tweak the string format
+    var displaySize = product.size.split('-')[1];
+    var displayImg = getImage(displayColor);
+    let cartRowHTML = '<tr class="cart-row"><td class="cart-item"><img src="'+ displayImg +'" alt="" /><div class="item-details"><h4>Adventure Cat Backpack</h4><p>' + displayColor + '</p><p>' + displaySize + '</p><a href="#" class="remove-btn">Remove</a></div></td><td class="item-price">$46</td><td><input type="number" class="item-quantity" value="1" min="1" /></td><td class="item-subtotal">$46</td></tr>';
+    document.querySelector('.cart-container').innerHTML += cartRowHTML;
+}
+
+function getImage(colorString) {
+    switch(colorString) {
+        case "strawberry":
+            return './images/backpack-strawberry.png';
+        case "blackberry":
+            return './images/backpack-blackberry.png';
+        case "crazyberry":
+            return './images/backpack-crazyberry.png';
+        case "orange":
+            return './images/backpack-orange.png';
+    }
+}
 
 // Handle removing items
 var removeCartItemButtons = document.getElementsByClassName('remove-btn');
-console.log(removeCartItemButtons);
+// console.log(removeCartItemButtons);
 for (let i = 0; i < removeCartItemButtons.length; i++) {
     var button = removeCartItemButtons[i];
-    button.addEventListener('click', function(event) {
+    button.addEventListener('click', function (event) {
         var buttonClicked = event.target;
         buttonClicked.parentElement.parentElement.parentElement.remove();
         updatePrice();  // update total price
@@ -20,10 +51,10 @@ for (let i = 0; i < removeCartItemButtons.length; i++) {
 
 // Handle quantity changes for each item
 var quantityInputs = document.getElementsByClassName('item-quantity');
-console.log(quantityInputs);
+// console.log(quantityInputs);
 for (let i = 0; i < quantityInputs.length; i++) {
     var quantityInput = quantityInputs[i];
-    console.log(quantityInput);
+    // console.log(quantityInput);
     quantityInput.addEventListener('change', updateQuantity);
 }
 
@@ -34,17 +65,13 @@ function updateQuantity(event) {
     }
     updatePrice();
 }
-// check quantity change
-// get subtotal
-// iterate over CartRows
-// get total
 
 function updatePrice() {
     var cartRows = document.getElementsByClassName('cart-row');
     for (let i = 0; i < cartRows.length; i++) {
         var cartRow = cartRows[i];
         var priceElem = cartRow.getElementsByClassName('item-price')[0];
-        var price = parseFloat(priceElem.innerText.replace('$',''))
+        var price = parseFloat(priceElem.innerText.replace('$', ''))
         var quantityElem = cartRow.getElementsByClassName('item-quantity')[0];
         var quantity = quantityElem.value;
         var subtotalElem = cartRow.getElementsByClassName('item-subtotal')[0];
@@ -55,7 +82,7 @@ function updatePrice() {
     for (let i = 0; i < cartRows.length; i++) {
         var cartRow = cartRows[i];
         let rowSubtotal = cartRow.getElementsByClassName('item-subtotal')[0].innerText;
-        let rowSubtotalNum = parseFloat(rowSubtotal.replace('$',''));
+        let rowSubtotalNum = parseFloat(rowSubtotal.replace('$', ''));
         total = total + rowSubtotalNum;
     }
     totalElem.innerText = `\$${total}`;
