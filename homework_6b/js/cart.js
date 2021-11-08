@@ -1,14 +1,9 @@
-// get color, size choices from product details page
-// save to current items local storage
-// update cart number
-// load current items
+// JS implementation for the cart
 
 const storedValue = JSON.parse(localStorage.getItem('savedCart'));
 var productItems = storedValue ? storedValue : []; 
 
 const cartContainer = document.querySelector('.cart-container');
-
-updatePrice();
 
 if (productItems != null) {
     document.querySelector('.empty-cart-msg').remove();
@@ -44,13 +39,14 @@ function getImage(colorString) {
 
 // Handle removing items
 var removeCartItemButtons = document.getElementsByClassName('remove-btn');
-for (var i = 0; i < removeCartItemButtons.length; i++) {
+for (let i = 0; i < removeCartItemButtons.length; i++) {
     var button = removeCartItemButtons[i];
     button.addEventListener('click', function (event) {
         var buttonClicked = event.target;
         var toDelete = buttonClicked.parentElement.parentElement.parentElement;
         toDelete.remove();
         updatePrice();  // update total price
+        console.log(i);
         removeItem(i);
     })
 }
@@ -94,4 +90,5 @@ function updatePrice() {
 
 function removeItem(index) {
     productItems.splice(index, 1); // start at index to delete and delete 1 item
+    document.querySelector('.cart-num-items').innerText = productItems.length;
 }
