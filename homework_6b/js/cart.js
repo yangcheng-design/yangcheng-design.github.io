@@ -4,11 +4,16 @@
 // load current items
 
 const storedValue = JSON.parse(localStorage.getItem('savedCart'));
-const productItems = storedValue ? storedValue : []; 
+var productItems = storedValue ? storedValue : []; 
 
-loadCart();
+const cartContainer = document.querySelector('.cart-container');
 
 updatePrice();
+
+if (productItems != null) {
+    document.querySelector('.empty-cart-msg').remove();
+    loadCart();
+}
 
 function loadCart() {
     for (let i = 0; i < productItems.length; i++) {
@@ -21,7 +26,7 @@ function displaySingleProduct(product) {
     var displaySize = product.size.split('-')[1];
     var displayImg = getImage(displayColor);
     let cartRowHTML = '<tr class="cart-row"><td class="cart-item"><img src="'+ displayImg +'" alt="" /><div class="item-details"><h4>Adventure Cat Backpack</h4><p>' + displayColor + '</p><p>' + displaySize + '</p><a href="#" class="remove-btn">Remove</a></div></td><td class="item-price">$46</td><td><input type="number" class="item-quantity" value="1" min="1" /></td><td class="item-subtotal">$46</td></tr>';
-    document.querySelector('.cart-container').innerHTML += cartRowHTML;
+    cartContainer.innerHTML += cartRowHTML;
 }
 
 function getImage(colorString) {
@@ -39,22 +44,21 @@ function getImage(colorString) {
 
 // Handle removing items
 var removeCartItemButtons = document.getElementsByClassName('remove-btn');
-// console.log(removeCartItemButtons);
-for (let i = 0; i < removeCartItemButtons.length; i++) {
+for (var i = 0; i < removeCartItemButtons.length; i++) {
     var button = removeCartItemButtons[i];
     button.addEventListener('click', function (event) {
         var buttonClicked = event.target;
-        buttonClicked.parentElement.parentElement.parentElement.remove();
+        var toDelete = buttonClicked.parentElement.parentElement.parentElement;
+        toDelete.remove();
         updatePrice();  // update total price
+        removeItem(i);
     })
 }
 
 // Handle quantity changes for each item
 var quantityInputs = document.getElementsByClassName('item-quantity');
-// console.log(quantityInputs);
 for (let i = 0; i < quantityInputs.length; i++) {
     var quantityInput = quantityInputs[i];
-    // console.log(quantityInput);
     quantityInput.addEventListener('change', updateQuantity);
 }
 
@@ -86,4 +90,8 @@ function updatePrice() {
         total = total + rowSubtotalNum;
     }
     totalElem.innerText = `\$${total}`;
+}
+
+function removeItem(index) {
+    productItems.splice(index, 1); // start at index to delete and delete 1 item
 }

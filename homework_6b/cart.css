@@ -21,7 +21,11 @@ h1 {
 th {
     text-align: left;
 }
-  
+
+.empty-cart-msg {
+    margin: 5rem auto 5rem 10rem;
+}
+
 .cart-item {
     display: flex;
     flex-direction: row;

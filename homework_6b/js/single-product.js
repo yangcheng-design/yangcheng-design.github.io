@@ -6,12 +6,6 @@ var cart = savedCart ? savedCart : [];
 var savedQuantity = localStorage.getItem('cartQuantity');
 var totalCartQuantity = savedQuantity ? savedQuantity : 0;
 
-// if (localStorage.getItem('cartQuantity') != null) {
-//     totalCartQuantity = localStorage.getItem('cartQuantity');
-//     var cartNum = document.querySelector['.cart-num-items'].innerText;
-//     console.log(cartNum);
-// }
-
 // Declare Product object
 function Product(productName, productColor, productSize) {
     this.name = productName;
@@ -34,24 +28,24 @@ let buyBtn = document.querySelector('.add-to-cart-btn');
 
 // Change the product image according to color selected
 strawberry.addEventListener('click', function () {
-        document.getElementById('product-image').src = './images/backpack-strawberry.png';
-    }); 
+    document.getElementById('product-image').src = './images/backpack-strawberry.png';
+}); 
 
 blackberry.addEventListener('click', function () {
-        document.getElementById('product-image').src = './images/backpack-blackberry.png';
-    }); 
+    document.getElementById('product-image').src = './images/backpack-blackberry.png';
+}); 
 
 crazyberry.addEventListener('click', function () {
-        document.getElementById('product-image').src = './images/backpack-crazyberry.png';
-    }); 
+    document.getElementById('product-image').src = './images/backpack-crazyberry.png';
+}); 
 
 orange.addEventListener('click', function () {
-        document.getElementById('product-image').src = './images/backpack-orange.png';
-    }); 
+    document.getElementById('product-image').src = './images/backpack-orange.png';
+}); 
 
 buyBtn.addEventListener('click', function () {
-        document.getElementById('cart').src = './images/cart-1-item.svg';
-    });
+    document.getElementById('cart').src = './images/cart-1-item.svg';
+});
 
 // Give clicked color option activated color
 var colorInputs = document.querySelectorAll('.colors >img'); 
@@ -61,7 +55,6 @@ for(let i = 0; i < colorInputs.length; i++) {
         current[0].className = current[0].className.replace(' active-color', ''); // replace deselected class
         this.className += ' active-color'; 
         color = current[0].className.split(' ')[0];  // get the color name from the list of Class names
-        // console.log(color);
     });
 }
 
